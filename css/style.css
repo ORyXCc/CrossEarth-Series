@@ -963,8 +963,35 @@ h2{
 
 /* ====== Footer ====== */
 footer{ padding: 8px 0 46px; }
-.foot-contact{
+
+.foot-top{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
   margin-bottom: 24px;
+}
+.foot-contact-block{
+  flex: 1;
+  min-width: 0;
+}
+.foot-clustrmaps{
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+.foot-clustrmaps iframe,
+.foot-clustrmaps object,
+.foot-clustrmaps > div{
+  display: block;
+  border-radius: 12px;
+}
+
+.foot-contact{
+  margin-bottom: 0;
 }
 .foot-contact-title{
   margin: 0 0 10px;
@@ -1050,6 +1077,10 @@ footer{ padding: 8px 0 46px; }
     overflow: hidden;
   }
   .benchmark-num{ font-size: 28px; }
+}
+@media (max-width: 640px){
+  .foot-top{ flex-direction: column; }
+  .foot-clustrmaps{ width: 100%; }
 }
 
 @media (min-width: 880px){
