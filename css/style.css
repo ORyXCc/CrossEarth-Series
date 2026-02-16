@@ -814,7 +814,7 @@ h2{
 .logo-card{
   border-radius: var(--radius-2xl);
   border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.92);
+  background: rgb(255, 255, 255);
   padding: 16px;
   display: flex;
   align-items: center;
@@ -830,8 +830,11 @@ h2{
   transform: scale(1.1);
   cursor: pointer;
 }
+.logo-grid-premium .logo-card,
+.logo-grid-inline .logo-card{
+  background: rgb(255, 255, 255);
+}
 .logo-grid-premium .logo-card{
-  background: #ffffff;
   border-radius: 12px;
   padding: 0;
   width: 96px;
