@@ -964,20 +964,33 @@ h2{
 /* ====== Footer ====== */
 footer{ padding: 8px 0 46px; }
 
-.foot-top{
+.foot-main{
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 24px 32px;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 24px;
 }
-.foot-contact-block{
+.foot-left{
   flex: 1;
   min-width: 0;
 }
-.foot-clustrmaps{
+.foot-brand{
+  margin-top: 20px;
+}
+.foot-brand .small{ color: rgba(255,255,255,.55); font-size: 12px; }
+.foot-right{
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.foot-clustrmaps{
+  width: 260px;
+  max-width: 100%;
+  min-height: 120px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.35);
@@ -987,7 +1000,17 @@ footer{ padding: 8px 0 46px; }
 .foot-clustrmaps object,
 .foot-clustrmaps > div{
   display: block;
+  width: 100% !important;
+  max-width: 260px;
+  height: auto;
+  border: none;
   border-radius: 12px;
+}
+.foot-pills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
 }
 
 .foot-contact{
@@ -1062,11 +1085,6 @@ footer{ padding: 8px 0 46px; }
 .foot-copyright p{ margin: 0 0 6px; }
 .foot-copyright p:last-child{ margin-bottom: 0; }
 
-.foot{
-  display:flex; flex-direction:column; gap:12px;
-  align-items:flex-start; justify-content:space-between;
-}
-.foot .small{ color: rgba(255,255,255,.55); font-size: 12px; }
 
 /* ====== Responsive ====== */
 @media (max-width: 768px){
@@ -1079,8 +1097,10 @@ footer{ padding: 8px 0 46px; }
   .benchmark-num{ font-size: 28px; }
 }
 @media (max-width: 640px){
-  .foot-top{ flex-direction: column; }
-  .foot-clustrmaps{ width: 100%; }
+  .foot-main{ flex-direction: column; }
+  .foot-right{ align-items: flex-start; }
+  .foot-pills{ justify-content: flex-start; }
+  .foot-clustrmaps{ width: 100%; max-width: 280px; }
 }
 
 @media (min-width: 880px){
@@ -1092,7 +1112,8 @@ footer{ padding: 8px 0 46px; }
   .pillars-grid{ grid-template-columns: 4fr 7fr; }
   .hero-title{ font-size: 48px; }
   h2{ font-size: 30px; }
-  .foot{ flex-direction:row; align-items:center; }
+  .foot-main{ align-items: center; }
+  .foot-right{ align-items: flex-end; }
 
   .gallery-slide{
     grid-template-columns: 6fr 6fr;
