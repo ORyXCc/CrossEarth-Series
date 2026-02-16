@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrossEarth Series — Geospatial Perception Project Suite</title>
+  <link rel="icon" href="images/CrossEarth.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="CrossEarth Series Home">
+        <span class="brand-badge" aria-hidden="true">🌍</span>
+        <span>
+          <div class="brand-title">CrossEarth Series</div>
+          <div class="brand-sub">Geospatial Perception Project Suite</div>
+        </span>
+      </a>
+
+      <div class="nav-links" aria-label="primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#credits">Contributors</a>
+        <a href="#gallery">Results</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost nav-btn-papers" href="#papers">Papers</a>
+        <a class="btn btn-primary nav-btn-getstarted" href="#get-started">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="bg-wrap">
+      <div class="bg-grad"></div>
+      <div class="bg-grid"></div>
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+      <div class="atmo"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-animate-title" style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="pill">Domain Generalization</span>
+          <span class="pill">Geospatial Foundation</span>
+          <span class="pill">Optical + SAR</span>
+          <span class="pill">Segmentation</span>
+        </div>
+
+        <h1 class="hero-title hero-animate-title">
+          CrossEarth Series
+          <span class="muted">: a project suite for</span>
+          <span class="grad">cross-domain geospatial perception</span>
+        </h1>
+
+        <p class="hero-desc hero-animate-title">
+          A unified showcase of four research threads—CrossEarth (optical DG),
+          CrossEarth-SAR (SAR DG), CrossEarth-Gate (cross-modal gating), and
+          Earth-Adapter (RS-PEFT)—designed to
+          generalize across regions, sensors, and imaging conditions.
+        </p>
+
+        <div class="hero-cta hero-animate-cta">
+          <a class="btn btn-primary" href="#pillars">Pillars</a>
+          <a class="btn btn-ghost" href="#papers">Papers</a>
+          <a class="btn btn-ghost" href="#credits">Contributors</a>
+        </div>
+
+        <div class="grid grid-2 hero-stats hero-animate-stats" style="margin-top:16px;">
+          <a class="stat stat-link" href="#papers" aria-label="Go to Papers: Optical DG evaluation">
+            <div class="stat-top">
+              <div>
+                <div class="stat-label">Optical DG evaluation</div>
+                <div class="stat-value">32 task settings</div>
+                <div class="stat-hint">Across five compositional domain gaps</div>
+              </div>
+              <div class="brand-badge" style="width:40px;height:40px;border-radius:14px;">🛰️</div>
+            </div>
+            <div class="bar"><i></i></div>
+          </a>
+
+          <a class="stat stat-link" href="#papers" aria-label="Go to Papers: SAR DG evaluation">
+            <div class="stat-top">
+              <div>
+                <div class="stat-label">SAR DG evaluation</div>
+                <div class="stat-value">22 sub-benchmarks</div>
+                <div class="stat-hint">Across eight domain gaps</div>
+              </div>
+              <div class="brand-badge" style="width:40px;height:40px;border-radius:14px;">📡</div>
+            </div>
+            <div class="bar"><i></i></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="card card-glow hero-animate-quickmap">
+        <div style="position:relative;">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <div style="font-weight:900;">Quick map</div>
+            <span class="pill" style="font-size:11px; padding:6px 10px;">Cross-domain stack</span>
+          </div>
+
+          <div class="grid quickmap-grid">
+            <a class="card quickmap-card quickmap-card-link" href="https://ieeexplore.ieee.org/document/11316817" target="_blank" rel="noopener noreferrer">
+              <div class="quickmap-card-head">
+                <div style="display:flex; gap:10px; align-items:center;">
+                  <span class="brand-badge" style="width:34px;height:34px;border-radius:12px;">🌍</span>
+                  <div style="font-weight:900;">CrossEarth</div>
+                </div>
+                <span class="status-badge">TPAMI 2025</span>
+              </div>
+              <div class="quickmap-desc" style="margin-top:10px; color: var(--muted); font-size:13px; line-height:1.55;">
+                Optical RS DG via Earth-Style Injection + Multi-Task Training.
+              </div>
+            </a>
+
+            <a class="card quickmap-card quickmap-card-link" href="https://arxiv.org/abs/2504.06220" target="_blank" rel="noopener noreferrer">
+              <div class="quickmap-card-head">
+                <div style="display:flex; gap:10px; align-items:center;">
+                  <span class="brand-badge" style="width:34px;height:34px;border-radius:12px;">🧩</span>
+                  <div style="font-weight:900;">Earth-Adapter</div>
+                </div>
+                <span class="status-badge">AAAI 2026</span>
+              </div>
+              <div class="quickmap-desc" style="margin-top:10px; color: var(--muted); font-size:13px; line-height:1.55;">
+                RS-PEFT that mitigates artifacts using frequency-guided MoA.
+              </div>
+            </a>
+
+            <div class="card quickmap-card" data-pillar="sar" role="button" tabindex="0">
+              <div class="quickmap-card-head">
+                <div style="display:flex; gap:10px; align-items:center;">
+                  <span class="brand-badge" style="width:34px;height:34px;border-radius:12px;">📡</span>
+                  <div style="font-weight:900;">CrossEarth-SAR</div>
+                </div>
+                <span class="status-badge status-badge-review">Under Review</span>
+              </div>
+              <div class="quickmap-desc" style="margin-top:10px; color: var(--muted); font-size:13px; line-height:1.55;">
+                SAR DG via physics-guided sparse MoE and large-scale resources.
+              </div>
+            </div>
+
+            <div class="card quickmap-card" data-pillar="gate" role="button" tabindex="0">
+              <div class="quickmap-card-head">
+                <div style="display:flex; gap:10px; align-items:center;">
+                  <span class="brand-badge quickmap-icon-gate" style="width:34px;height:34px;border-radius:12px;" aria-hidden="true">⊞</span>
+                  <div style="font-weight:900;">CrossEarth-Gate</div>
+                </div>
+                <span class="status-badge status-badge-review">Under Review</span>
+              </div>
+              <div class="quickmap-desc" style="margin-top:10px; color: var(--muted); font-size:13px; line-height:1.55;">
+                Cross-modal gating for unified optical perception.
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:14px; padding:14px;">
+            <div style="color: var(--muted2); font-size:12px;">CrossEarth Series stack</div>
+            <div style="margin-top:6px; color: rgba(255,255,255,.78); font-size:13px; line-height:1.55;">
+              CrossEarth Series spans optical DG, SAR DG, PEFT, and cross-modal fusion.
+              Scroll down to the publications, benchmarks, contributors, and results sections
+              to explore the full research suite.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container news-section-wrap">
+      <div class="news-glass" aria-label="News &amp; Updates">
+        <a class="news-row" href="https://ieeexplore.ieee.org/document/11316817" target="_blank" rel="noopener noreferrer">
+          <span class="news-row-content">Congratulations to <strong>CrossEarth</strong> for being accepted by <strong>TPAMI 2025</strong>!</span>
+          <span class="news-row-date">2025-12</span>
+        </a>
+        <a class="news-row" href="https://arxiv.org/abs/2504.06220" target="_blank" rel="noopener noreferrer">
+          <span class="news-row-content">Congratulations to <strong>Earth-Adapter</strong> for being accepted by <strong>AAAI 2026</strong>!</span>
+          <span class="news-row-date">2026-01</span>
+        </a>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">✨</span><span>Why CrossEarth Series</span></div>
+      <h2>Generalization-first geospatial perception</h2>
+      <p class="section-desc">
+        Remote sensing (optical and SAR) experiences domain shifts from region, sensor, spectral band,
+        platform, polarization, and even climate. CrossEarth Series organizes a research stack that scales from
+        data-centric augmentation, to PEFT for artifacts, to physics-guided sparsity for SAR.
+      </p>
+    </div>
+
+    <div class="challenge-bar" aria-label="Domain shift challenges">
+      <span class="challenge-bar-item"><span class="challenge-icon" aria-hidden="true">📍</span> Region</span>
+      <span class="challenge-bar-item"><span class="challenge-icon" aria-hidden="true">🛰️</span> Sensor</span>
+      <span class="challenge-bar-item"><span class="challenge-icon" aria-hidden="true">🌈</span> Spectral</span>
+      <span class="challenge-bar-item"><span class="challenge-icon" aria-hidden="true">🌤</span> Climate</span>
+    </div>
+
+    <div class="grid grid-12">
+      <div class="card">
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="chip"><span class="dot"></span> Unseen domains</span>
+          <span class="chip"><span class="dot" style="background: rgba(68,208,124,.85)"></span> Robust representations</span>
+          <span class="chip"><span class="dot" style="background: rgba(215,181,109,.85)"></span> Earth observation</span>
+        </div>
+
+        <h3 style="margin:14px 0 0; font-size:16px; font-weight:900;">Design principles</h3>
+
+        <ul class="design-principles">
+          <li class="design-principle">
+            <span class="design-principle-icon" aria-hidden="true">🌐</span>
+            <div>
+              <strong>Coverage & diversity</strong>
+              <p>Expand training distributions toward the real-world test manifold.</p>
+            </div>
+          </li>
+          <li class="design-principle">
+            <span class="design-principle-icon" aria-hidden="true">⚡</span>
+            <div>
+              <strong>Lightweight adaptation</strong>
+              <p>Correct domain-specific artifacts without breaking frozen foundation representations.</p>
+            </div>
+          </li>
+          <li class="design-principle">
+            <span class="design-principle-icon" aria-hidden="true">◉</span>
+            <div>
+              <strong>Physics-aware scaling</strong>
+              <p>Use physically grounded cues to stabilize routing under extreme SAR heterogeneity.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0; font-size:16px; font-weight:900;">What CrossEarth Series offers</h3>
+        <ul class="offers-list">
+          <li><strong>Reproducible Baselines</strong> — Standardized codebases and experiment configs for fair comparison.</li>
+          <li><strong>Modular Components</strong> — Pluggable modules (PEFT, gating) that integrate with existing foundation models.</li>
+          <li><strong>Standardized Evaluation</strong> — Unified benchmarks and metrics for optical and SAR domain generalization.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="pillars" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">🧭</span><span>Core pillars</span></div>
+      <h2>Four pillars, one generalization narrative</h2>
+      <p class="section-desc">Switch between pillars to preview how each work fits into the CrossEarth Series stack.</p>
+    </div>
+
+    <div class="grid grid-12 pillars-grid">
+      <div class="tablist" role="tablist" aria-label="CrossEarth Series pillars">
+        <button class="tabbtn active" data-tab="cross" role="tab" aria-selected="true">
+          <div class="row">
+            <div>
+              <div class="title">CrossEarth</div>
+              <div class="sub">Data augmentation + multi-task training for optical RS domain generalization</div>
+            </div>
+            <span class="tag">View</span>
+          </div>
+        </button>
+
+        <button class="tabbtn" data-tab="adapter" role="tab" aria-selected="false">
+          <div class="row">
+            <div>
+              <div class="title">Earth-Adapter</div>
+              <div class="sub">Frequency-guided PEFT that targets RS artifacts in feature space</div>
+            </div>
+            <span class="tag">View</span>
+          </div>
+        </button>
+
+        <button class="tabbtn" data-tab="sar" role="tab" aria-selected="false">
+          <div class="row">
+            <div>
+              <div class="title">CrossEarth-SAR</div>
+              <div class="sub">Physics-guided sparse MoE for billion-scale SAR domain generalization</div>
+            </div>
+            <span class="tag">View</span>
+          </div>
+        </button>
+
+        <button class="tabbtn" data-tab="gate" role="tab" aria-selected="false">
+          <div class="row">
+            <div>
+              <div class="title">CrossEarth-Gate</div>
+              <div class="sub">Cross-modal gating for unified optical perception</div>
+            </div>
+            <span class="tag">View</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" aria-live="polite">
+        <div id="tab-panel" class="content"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAPERS -->
+  <section id="papers" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">📚</span><span>Publications</span></div>
+      <h2>Four papers that define the CrossEarth Series</h2>
+      <p class="section-desc">
+        Use these cards as your canonical project entry points, with direct links to papers, code, and (where available) project resources.
+      </p>
+    </div>
+
+    <div class="grid grid-2" id="papers-grid">
+      <div class="card card-glow paper-card">
+        <div class="paper-head">
+          <div>
+            <span class="paper-badge">🌍 Vision Foundation Model</span>
+            <div class="paper-title-row">
+              <div class="paper-title">CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation</div>
+              <span class="status-badge">TPAMI 2025</span>
+            </div>
+            <div class="paper-tagline">
+              Combines Earth-Style Injection and Multi-Task Training to handle diverse unseen domain gaps in optical remote sensing.
+            </div>
+          </div>
+          <div class="brand-badge" style="width:44px;height:44px;border-radius:16px;">✨</div>
+        </div>
+
+        <ul class="ul">
+          <li><span class="check">✓</span><span>Earth-Style Injection broadens training-domain coverage via field-style embeddings.</span></li>
+          <li><span class="check">✓</span><span>Multi-task segmentation + MIM improves robustness under distribution shifts.</span></li>
+          <li><span class="check">✓</span><span>Curates a comprehensive RSDG segmentation benchmark spanning multiple domain gaps.</span></li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">RSDG</span><span class="tag">Semantic Segmentation</span><span class="tag">Optical RS</span><span class="tag">MIM</span>
+        </div>
+
+        <div class="paper-actions">
+          <a class="btn btn-primary" href="https://arxiv.org/pdf/2410.22629.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a class="btn btn-ghost" href="https://github.com/Cuzyoung/CrossEarth" target="_blank" rel="noopener noreferrer">Code</a>
+          <button type="button" class="btn btn-ghost bibtex-btn" data-bibtex-id="crossearth" aria-label="Copy BibTeX">BibTeX</button>
+        </div>
+      </div>
+
+      <div class="card card-glow paper-card">
+        <div class="paper-head">
+          <div>
+            <span class="paper-badge">🧩 Parameter-Efficient Fine-Tuning</span>
+            <div class="paper-title-row">
+              <div class="paper-title">Earth-Adapter: Bridge the Geospatial Domain Gaps with a Frequency-Guided Mixture of Adapters</div>
+              <span class="status-badge">AAAI 2026</span>
+            </div>
+            <div class="paper-tagline">
+              Tailors PEFT to RS segmentation by isolating and mitigating artifacts using frequency decomposition and dynamic fusion.
+            </div>
+          </div>
+          <div class="brand-badge" style="width:44px;height:44px;border-radius:16px;">✨</div>
+        </div>
+
+        <ul class="ul">
+          <li><span class="check">✓</span><span>DFT splits features into LF/HF components to isolate artifact-heavy signals.</span></li>
+          <li><span class="check">✓</span><span>Mixture of Adapters refines each subspace; router aggregates adaptively.</span></li>
+          <li><span class="check">✓</span><span>Maintains a strong parameter–performance trade-off for dense prediction.</span></li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">PEFT</span><span class="tag">Adapters</span><span class="tag">DFT</span><span class="tag">Artifacts</span>
+        </div>
+
+        <div class="paper-actions">
+          <a class="btn btn-primary" href="https://arxiv.org/pdf/2504.06220.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a class="btn btn-ghost" href="https://github.com/VisionXLab/Earth-Adapter" target="_blank" rel="noopener noreferrer">Code</a>
+          <button type="button" class="btn btn-ghost bibtex-btn" data-bibtex-id="earth-adapter" aria-label="Copy BibTeX">BibTeX</button>
+        </div>
+      </div>
+
+      <div class="card card-glow paper-card">
+        <div class="paper-head">
+          <div>
+            <span class="paper-badge">📡 SAR Foundation Model</span>
+            <div class="paper-title-row">
+              <div class="paper-title">CrossEarth-SAR: A SAR-Centric and Billion-Scale Geospatial Foundation Model for Domain Generalizable Semantic Segmentation</div>
+              <span class="status-badge status-badge-review">Under Review</span>
+            </div>
+            <div class="paper-tagline">
+              Introduces physics-guided sparse MoE routing and large-scale SAR resources to push SAR domain generalization.
+            </div>
+          </div>
+          <div class="brand-badge" style="width:44px;height:44px;border-radius:16px;">✨</div>
+        </div>
+
+        <ul class="ul">
+          <li><span class="check">✓</span><span>Physics-guided routing stabilizes expert selection under severe SAR domain shifts.</span></li>
+          <li><span class="check">✓</span><span>Sparse MoE scales capacity while controlling compute.</span></li>
+          <li><span class="check">✓</span><span>Builds a large SAR dataset and multi-gap benchmark suite for unified evaluation.</span></li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">SAR</span><span class="tag">Sparse MoE</span><span class="tag">Physics</span><span class="tag">DG</span>
+        </div>
+
+        <div class="paper-actions">
+          <span class="btn btn-primary btn-disabled" title="Coming soon">Paper</span>
+          <span class="btn btn-ghost btn-disabled" title="Coming soon">Code</span>
+          <button type="button" class="btn btn-ghost btn-disabled bibtex-btn" data-bibtex-id="crossearth-sar" aria-label="Copy BibTeX" disabled>BibTeX</button>
+        </div>
+      </div>
+
+      <div class="card card-glow paper-card">
+        <div class="paper-head">
+          <div>
+            <span class="paper-badge">🔀 Cross-Modal Gating</span>
+            <div class="paper-title-row">
+              <div class="paper-title">CrossEarth-Gate: Cross-Modal Gating for Unified Optical Geospatial Perception</div>
+              <span class="status-badge status-badge-review">Under Review</span>
+            </div>
+            <div class="paper-tagline">
+              Introduces a gating module for optical representations, enabling robust cross-modal geospatial understanding.
+            </div>
+          </div>
+          <div class="brand-badge" style="width:44px;height:44px;border-radius:16px;">✨</div>
+        </div>
+
+        <ul class="ul">
+          <li><span class="check">✓</span><span>Aligns optical features with lightweight cross-modal gates.</span></li>
+          <li><span class="check">✓</span><span>Improves transfer across sensors and acquisition conditions when used with CrossEarth.</span></li>
+          <li><span class="check">✓</span><span>Designed as a reusable module within the broader CrossEarth Series stack.</span></li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">Cross-Modal</span><span class="tag">Gating</span><span class="tag">Optical</span><span class="tag">DG</span>
+        </div>
+
+        <div class="paper-actions">
+          <a class="btn btn-primary" href="https://arxiv.org/pdf/2511.20302.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+          <span class="btn btn-ghost btn-disabled" title="Coming soon">Code</span>
+          <button type="button" class="btn btn-ghost bibtex-btn" data-bibtex-id="crossearth-gate" aria-label="Copy BibTeX">BibTeX</button>
+        </div>
+      </div>
+    </div>
+    <div id="bibtex-toast" class="bibtex-toast" aria-live="polite" hidden></div>
+  </section>
+
+  <!-- BENCHMARKS -->
+  <section id="benchmarks" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">📊</span><span>Evaluation</span></div>
+      <h2>Benchmarks built for real-world shifts</h2>
+      <p class="section-desc">
+        Domain gaps are compositional. The CrossEarth Series stack emphasizes standardized, multi-gap evaluation across both optical and SAR modalities.
+      </p>
+    </div>
+
+    <div class="grid grid-12">
+      <div class="card">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <span class="brand-badge" style="width:40px;height:40px;border-radius:14px;">🛰️</span>
+          <h3 style="margin:0; font-size:16px; font-weight:900;">Optical RSDG suite</h3>
+        </div>
+        <p style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.6;">
+          Curated task settings for semantic segmentation that cover multiple application scenes and compositional domain gaps.
+        </p>
+
+        <div class="grid grid-2" style="margin-top:12px;">
+          <div class="card" style="padding:14px;">
+            <div style="font-weight:900;">Task settings</div>
+            <div class="benchmark-num">32</div>
+            <div style="font-size:12px; color:var(--muted2); margin-top:6px;">Standardized RSDG evaluation for segmentation</div>
+          </div>
+          <div class="card" style="padding:14px;">
+            <div style="font-weight:900;">Domain gaps</div>
+            <div class="benchmark-num">5</div>
+            <div style="font-size:12px; color:var(--muted2); margin-top:6px;">Region / Spectral band / Platform / Climate (+ compositions)</div>
+          </div>
+        </div>
+
+        <div class="gap-tags" style="margin-top:14px;">
+          <span class="gap-tag">Unseen Region</span>
+          <span class="gap-tag">Unseen Spectral Band</span>
+          <span class="gap-tag">Unseen Region + Spectral Band</span>
+          <span class="gap-tag">Unseen Region + Platform</span>
+          <span class="gap-tag">Unseen Region + Climate</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <span class="brand-badge" style="width:40px;height:40px;border-radius:14px;">📡</span>
+          <h3 style="margin:0; font-size:16px; font-weight:900;">SAR DG suite</h3>
+        </div>
+        <p style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.6;">
+          A unified standard for SAR domain generalization—built to reflect fragmentation across sensors, bands, and polarization.
+        </p>
+
+        <div class="card benchmark-dataset-card" style="padding:14px; margin-top:12px;">
+          <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start; flex-wrap:wrap;">
+            <div>
+              <span class="pill" style="font-size:11px; margin-bottom:6px; display:inline-block;">dataset</span>
+              <div style="font-weight:900;">CrossEarth-SAR-200K</div>
+              <div style="margin-top:6px; font-size:12px; color:var(--muted2);">Large-scale SAR resource for continued pre-training</div>
+            </div>
+            <a class="btn btn-primary" href="https://huggingface.co/datasets/CrossEarth/CrossEarth-SAR-200K" target="_blank" rel="noopener noreferrer">View on HuggingFace</a>
+          </div>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:12px;">
+          <div class="card" style="padding:14px;">
+            <div style="font-weight:900;">Sub-benchmarks</div>
+            <div class="benchmark-num">22</div>
+          </div>
+          <div class="card" style="padding:14px;">
+            <div style="font-weight:900;">Domain gaps</div>
+            <div class="benchmark-num">8</div>
+          </div>
+        </div>
+
+        <div class="card card-sota" style="padding:14px; margin-top:12px;">
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span class="brand-badge" style="width:34px;height:34px;border-radius:12px;">📈</span>
+            <div style="font-weight:900;">State-of-the-Art performance</div>
+          </div>
+          <div style="margin-top:10px; font-size:20px; font-weight:900; color: var(--ce-green);">+10% mIoU</div>
+          <div style="margin-top:6px; color:var(--muted); font-size:13px; line-height:1.6;">
+            CrossEarth-SAR achieves leading results across 22 sub-benchmarks and 8 domain gaps, with physics-guided sparse MoE scaling capacity while keeping compute practical.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS GALLERY -->
+  <section id="gallery" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">🖼</span><span>Results</span></div>
+      <h2>Visualizing Generalization</h2>
+      <p class="section-desc">
+        Qualitative results across diverse benchmarks: from optical cityscapes to complex SAR geometries.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-inner">
+        <article class="gallery-slide active">
+          <div class="gallery-media">
+            <img src="Papers/CrossEarth-1.png" alt="CrossEarth optical DG qualitative result" loading="lazy">
+          </div>
+          <div class="gallery-copy">
+            <h3>Robust Optical Transfer</h3>
+            <p>Achieves robust segmentation on unseen cities (e.g., Dubai, Zurich) by leveraging Earth-Style Injection to bridge regional domain gaps.</p>
+            <div class="gallery-tags">
+              <span class="tag">Optical</span><span class="tag">Cross-Region</span><span class="tag">Style Injection</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="gallery-media">
+            <img src="Papers/Earth-adapter-1.png" alt="Earth-Adapter artifact mitigation result" loading="lazy">
+          </div>
+          <div class="gallery-copy">
+            <h3>Artifact-Free Adaptation</h3>
+            <p>Mitigates domain-specific artifacts (e.g., sensor noise, spectral shifts) using frequency-guided sparse adapters, outperforming full fine-tuning.</p>
+            <div class="gallery-tags">
+              <span class="tag">PEFT</span><span class="tag">Artifact Removal</span><span class="tag">Frequency Domain</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="gallery-media">
+            <img src="Papers/CrossEarth-Sar-1.png" alt="CrossEarth-SAR physics-aware SAR result" loading="lazy">
+          </div>
+          <div class="gallery-copy">
+            <h3>Physics-Aware SAR Perception</h3>
+            <p>Overcomes extreme SAR geometry distortions and speckle noise via physics-guided routing, enabling clear semantic interpretation in all-weather conditions.</p>
+            <div class="gallery-tags">
+              <span class="tag">SAR</span><span class="tag">Physics-Guided</span><span class="tag">Sparse MoE</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="gallery-media">
+            <img src="Papers/CrossEarth-gate.png" alt="CrossEarth-Gate cross-modal fusion result" loading="lazy">
+          </div>
+          <div class="gallery-copy">
+            <h3>Unified Cross-Modal Fusion</h3>
+            <p>Dynamically fuses complementary information from Optical and SAR modalities, ensuring reliable perception even when one sensor is compromised.</p>
+            <div class="gallery-tags">
+              <span class="tag">Fusion</span><span class="tag">Optical+SAR</span><span class="tag">Gating</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="gallery-controls">
+        <button class="btn btn-ghost gallery-arrow" type="button" data-gallery-prev aria-label="Previous result">←</button>
+        <div class="gallery-dots" role="tablist" aria-label="Results carousel">
+          <button class="gallery-dot active" type="button" aria-label="Go to result 1"></button>
+          <button class="gallery-dot" type="button" aria-label="Go to result 2"></button>
+          <button class="gallery-dot" type="button" aria-label="Go to result 3"></button>
+          <button class="gallery-dot" type="button" aria-label="Go to result 4"></button>
+        </div>
+        <button class="btn btn-ghost gallery-arrow" type="button" data-gallery-next aria-label="Next result">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section id="get-started" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">→</span><span>Integrate</span></div>
+      <h2>Get started with CrossEarth Series</h2>
+      <p class="section-desc">
+        Use the resources below to reproduce benchmarks, download checkpoints, and integrate CrossEarth Series models into your own pipelines.
+      </p>
+    </div>
+
+    <div class="grid grid-12">
+      <div class="card">
+        <h3 style="margin:0; font-size:16px; font-weight:900;">Checklist</h3>
+        <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px; color:var(--muted); font-size:13px; line-height:1.6;">
+          <div>✓ Start from the official code repositories and example configs.</div>
+          <div>✓ Download pretrained checkpoints for optical DG, SAR DG, and PEFT.</div>
+          <div>✓ Follow the benchmark documentation to reproduce key results.</div>
+          <div>✓ Extend the series to your own datasets and tasks.</div>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="#top">→ Back to top</a>
+          <a class="btn btn-ghost" href="#papers">📄 Papers section</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0; font-size:16px; font-weight:900;">Series resources</h3>
+        <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px;">
+          <a class="card" style="padding:14px;" href="https://github.com/Cuzyoung/CrossEarth" target="_blank" rel="noopener noreferrer">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-weight:900;">CrossEarth GitHub</div><div>→</div>
+            </div>
+            <div style="margin-top:6px; color:var(--muted2); font-size:12px;">Official code, models, and optical RSDG benchmark</div>
+          </a>
+
+          <a class="card" style="padding:14px;" href="https://github.com/VisionXLab/Earth-Adapter" target="_blank" rel="noopener noreferrer">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-weight:900;">Earth-Adapter GitHub</div><div>→</div>
+            </div>
+            <div style="margin-top:6px; color:var(--muted2); font-size:12px;">PEFT for RS artifacts, with configs and scripts</div>
+          </a>
+
+          <a class="card" style="padding:14px;" href="https://cuzyoung.github.io/CrossEarth-Homepage/" target="_blank" rel="noopener noreferrer">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-weight:900;">CrossEarth project page</div><div>→</div>
+            </div>
+            <div style="margin-top:6px; color:var(--muted2); font-size:12px; ">Interactive overview, figures, and additional materials</div>
+          </a>
+
+          <a class="card" style="padding:14px;" href="https://arxiv.org/abs/2511.20302" target="_blank" rel="noopener noreferrer">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-weight:900;">CrossEarth-Gate paper</div><div>→</div>
+            </div>
+            <div style="margin-top:6px; color:var(--muted2); font-size:12px;">Fisher-guided adaptive tuning engine for cross-domain RS segmentation</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDITS (last section: contributors + institutions, stacked vertically) -->
+  <section id="credits" class="container">
+    <div class="divider"></div>
+
+    <div class="section-title">
+      <div class="kicker"><span class="badge">🤝</span><span>Contributors &amp; Affiliations</span></div>
+      <h2>Contributors &amp; Affiliations</h2>
+      <p class="section-desc">
+        A collaborative effort bridging 5 labs across global regions.
+      </p>
+    </div>
+
+    <div class="credits-stack">
+      <div class="card credits-contributors-block">
+        <h3 style="margin:0; font-size:16px; font-weight:900;">Team members</h3>
+        <p style="margin-top:8px; color:var(--muted2); font-size:12px;">Authors and collaborators behind CrossEarth, CrossEarth-SAR, Earth-Adapter, and CrossEarth-Gate. Hover for role.</p>
+        <div class="contributor-avatars" aria-label="Team members">
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/GZY.png" alt="Gong Ziyang"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=cWip8QgAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Gong Ziyang</a>
+            <span class="contributor-tooltip">Project Leader</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/YZQ.png" alt="Ye Ziqi"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?hl=zh-CN&user=GA0gV5cAAAAJ" target="_blank" rel="noopener noreferrer">Ye Ziqi</a>
+            <span class="contributor-tooltip">Core Contributors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Wang Di.png" alt="Wang Di"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=3fThjewAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Wang Di</a>
+            <span class="contributor-tooltip">Core Contributors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/HXX.png" alt="Hu Xiaoxing"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?hl=zh-CN&user=zBM8_XkAAAAJ" target="_blank" rel="noopener noreferrer">Hu Xiaoxing</a>
+            <span class="contributor-tooltip">Core Contributors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Chen Hongruixuan.png" alt="Chen Hongruixuan"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=XOk4Cf0AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Chen Hongruixuan</a>
+            <span class="contributor-tooltip">Core Contributors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Huang Chen.png" alt="Huang Chen"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=71bDRbcAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Huang Chen</a>
+            <span class="contributor-tooltip">Core Contributors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Jia Yuru.png" alt="Jia Yuru"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=62c9GI0AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Jia Yuru</a>
+            <span class="contributor-tooltip">Core Contributors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Wang Haipeng.png" alt="Wang Haipeng"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=Uvrkb7EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Wang Haipeng</a>
+            <span class="contributor-tooltip">Corresponding Authors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Yang Xue.png" alt="Yang Xue"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?hl=zh-CN&user=2xTlvV0AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Yang Xue</a>
+            <span class="contributor-tooltip">Corresponding Authors</span>
+          </div>
+          <div class="contributor-item">
+            <div class="contributor-avatar" aria-hidden="true"><img src="images/Members/Yan Junchi.png" alt="Yan Junchi"></div>
+            <a class="contributor-name" href="https://scholar.google.com/citations?user=ga230VoAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Yan Junchi</a>
+            <span class="contributor-tooltip">Corresponding Authors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card logos-card credits-affiliations-block">
+        <h3 style="margin:0; font-size:16px; font-weight:900;">Participating institutions</h3>
+        <p style="margin-top:8px; color:var(--muted2); font-size:12px; line-height:1.6;">
+          Collaborating institutions; click to visit.
+        </p>
+        <div class="logo-grid logo-grid-inline">
+          <a href="https://thinklab.sjtu.edu.cn/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/RETHINKLAB.png" alt="RethinkLab" loading="lazy">
+            </div>
+          </a>
+          <a href="https://github.com/VisionXLab" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/VisionXLab.png" alt="VisionXLab" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.sjtu.edu.cn/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/STJ.png" alt="Shanghai Jiao Tong University" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/SFD.png" alt="Fudan University" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.sii.edu.cn/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/SHCZ.png" alt="Shanghai Chuangzhi" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.bit.edu.cn/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/BJLG.png" alt="Beijing Institute of Technology" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.bjzgca.edu.cn/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/BZGC.png" alt="Beijing Zhongguancun College" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.u-tokyo.ac.jp/en/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/UTokyo.png" alt="UTokyo" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.sysu.edu.cn/sysuen/" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/SYSU.png" alt="SYSU" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.kuleuven.be/english/kuleuven" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/LUWEN.png" alt="LuWEN" loading="lazy">
+            </div>
+          </a>
+          <a href="https://www.kth.se/en" target="_blank" rel="noopener noreferrer" class="logo-card">
+            <div class="logo-card-inner">
+              <img src="images/Institution/KTH.png" alt="KTH" loading="lazy">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <div class="divider"></div>
+
+    <div class="foot-contact" id="contact">
+      <h3 class="foot-contact-title">Contact Us</h3>
+      <div class="foot-contact-row">
+        <a class="foot-contact-item" href="mailto:gongziyang@sjtu.edu.cn">
+          <span class="foot-contact-icon" aria-hidden="true">✉</span>
+          <span>gongziyang@sjtu.edu.cn</span>
+        </a>
+        <div class="foot-contact-item foot-wechat-wrap">
+          <span class="foot-contact-icon" aria-hidden="true">💬</span>
+          <span>WeChat</span>
+          <div class="foot-wechat-qr" aria-hidden="true">
+            <img id="wechat-qr" src="" alt="WeChat QR" width="160" height="160">
+          </div>
+        </div>
+        <a class="foot-contact-item" href="#" aria-label="Zhihu">知乎</a>
+        <a class="foot-contact-item" href="#" aria-label="X (Twitter)">X</a>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>
+        <div style="font-weight:900;">CrossEarth Series</div>
+        <div class="small">A collaborative geospatial perception project suite across optical and SAR domains.</div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <span class="pill">Optical DG</span>
+        <span class="pill">SAR DG</span>
+        <span class="pill">RS-PEFT</span>
+      </div>
+    </div>
+
+    <div class="foot-copyright">
+      <p>Copyright © <span id="copyright-year">2026</span> CrossEarth Series.</p>
+      <p>The source code is released under the <strong>MIT License</strong>.<br>
+      The website content is licensed under <strong>CC BY 4.0</strong>.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
