@@ -692,19 +692,20 @@ h2{
   z-index: 100;
 }
 .contributor-avatars{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px 16px;
   margin-top: 20px;
-  justify-content: center;
-  align-items: flex-start;
+  justify-items: center;
 }
 .contributor-avatars .contributor-item{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0;
-  min-width: 96px;
+  min-width: 0;
+  width: 100%;
+  max-width: 100px;
 }
 .contributor-avatar{
   width: 80px;
@@ -733,7 +734,7 @@ h2{
 }
 .contributor-name{
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
   color: rgba(255,255,255,.9);
   text-decoration: none;
@@ -1113,6 +1114,7 @@ footer{ padding: 8px 0 46px; }
   .foot-pills{ justify-content: flex-start; }
   .foot-clustrmaps{ width: 140px; height: 90px; }
   .logo-grid-inline{ grid-template-columns: repeat(3, 1fr); }
+  .contributor-avatars{ grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (min-width: 880px){
