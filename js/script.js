@@ -154,9 +154,10 @@
 }`,
       "crossearth-sar": `@article{crossearthsar,
   title = {CrossEarth-SAR: A SAR-Centric and Billion-Scale Geospatial Foundation Model for Domain Generalizable Semantic Segmentation},
-  author = {<!-- authors -->},
-  journal = {arXiv preprint},
-  year = {2025}
+  author = {Ye, Ziqi and Gong, Ziyang and Liao, Ning and Hu, Xiaoxing and Wang, Di and Chen, Hongruixuan and Huang, Chen and He, Yiguo and Jia, Yuru and Wang, Xiaoxing and Wang, Haipeng and Yang, Xue and Yan, Junchi},
+  journal = {arXiv preprint arXiv:2603.12008},
+  year = {2026},
+  url = {https://arxiv.org/abs/2603.12008}
 }`,
       "crossearth-gate": `@article{crossearthgate2025,
   title = {CrossEarth-Gate: Cross-Modal Gating for Unified Optical-SAR Geospatial Perception},
